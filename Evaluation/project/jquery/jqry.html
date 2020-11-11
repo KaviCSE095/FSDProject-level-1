@@ -1,0 +1,192 @@
+<html>
+<title>
+Jquery
+</title>
+</html>
+<style>
+.flexbox{
+	display:flex;
+	border-style:solid;
+	border-color:brown;
+	background-color:pink;
+}
+#html{
+	background-color:silver;
+	height:25%;
+	overflow:hidden;
+}
+#html:hover{
+	overflow:scroll;
+}
+#text{
+	background-color:gold;
+	height:25%;
+	overflow:hidden;
+}
+#text:hover{
+		overflow:scroll;
+}
+#kavi{
+	background-color:red;
+	height:100px;
+	width:100px;
+	margin:10px;
+}
+#k1{ 
+	flex:2;
+	border-style:solid;
+	border-color:brown;
+	background-color:gray;
+	height:100%;
+}
+#div1
+{
+	flex:1;
+	margin-left:10px;
+	height:100%;
+	background-color:pink;
+	overflow:hidden;
+}
+#div1:hover{
+	overflow:scroll;
+}
+#k2{
+	height:50%;
+}
+</style>
+<body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		function changeshp(obj)
+		{
+			var shape=obj.value;
+			switch(shape)
+			{
+				case 's':
+					$("#kavi").css("height","100px");
+					$("#kavi").css("width","100px");
+					$("#kavi").css("border-radius","0%");
+					break;
+				case 'c':
+					$("#kavi").css("height","100px");
+					$("#kavi").css("width","100px");
+					$("#kavi").css("border-radius","50%");
+					break;
+				case 'rec':
+					$("#kavi").css("height","100px");
+					$("#kavi").css("width","130px");
+					$("#kavi").css("border-radius","0%");
+					break;
+			}
+		}		
+		function color(obj)
+		{
+			var clr=obj.value;
+			switch(clr)
+			{
+				case 'r':
+					$("#kavi").css("background-color","red");
+					break;
+				case 'b':
+					$("#kavi").css("background-color","blue");
+					break;
+				case 'y':
+					$("#kavi").css("background-color","yellow");
+					break;
+			}
+		}
+		function effect(obj)
+		{
+			var eff=obj.value;
+			switch(eff)
+			{
+			case "fi":
+				$("#kavi").fadeIn("slow");
+				break;
+			case "fo":
+				$("#kavi").fadeOut("slow");
+				break;
+			case "su":
+				$("#kavi").slideUp("slow");
+				break;
+			case "sd":
+				$("#kavi").slideDown("slow");
+				break;
+			}
+		}
+		function bgclr(obj)
+		{
+			var clr=obj.value;
+			switch(clr)
+			{
+				case "lg":
+					$("#k1").css("background-color","lightgreen");
+					break;
+				case "bl":
+					$("#k1").css("background-color","black");
+					break;
+				case "gr":
+					$("#k1").css("background-color","gray");
+					break;
+			}
+		}
+		function html(obj)
+		{
+			var val=obj.value;
+			$("#html").html(val);
+		}
+		function text(obj)
+		{
+			var val=obj.value;
+			$("#text").text(val);
+		}
+	</script>
+	<div class="flexbox">
+		<div id="div1">
+			<h3>
+				Shape
+			</h3>
+			<select onchange="changeshp(this)">
+				<option value='s'>Square</option>
+				<option value='c'>Circle</option>
+				<option value='rec'>Rectancle</option>
+			</select>
+			<h3>
+				Color
+			</h3>
+			<select onchange="color(this)">
+				<option value='r'>red</option>
+				<option value='b'>Blue</option>
+				<option value='y'>Yellow</option>
+			</select>
+			<h3>
+				Background color
+			</h3>
+			<select onchange="bgclr(this)">
+				<option value="gr">Gray</option>
+				<option value="lg">Light green</option>
+				<option value="bl">Black</option>
+			</select>		
+			<h3>
+				Effect
+			</h3>  
+			<select onchange="effect(this)">
+				<option value="fi">Fade in</option>
+				<option value="fo">Fade out</option>
+				<option value="su">Slide up</option>
+				<option value="sd">Slide down</option>
+			</select>
+			<h3>HTML</h3>
+			<textarea rows="5" cols="50"onchange="html(this)"></textarea>
+			<h3>TEXT</h3>
+			<textarea rows="5" cols="50"onchange="text(this)"></textarea>
+		</div>
+		<div id="k1">
+			<div id="k2">
+				<div id="kavi">	</div>
+			</div>
+			<div id="html"></div>
+			<div id="text"></div>
+		</div>
+	</div>
+</body>

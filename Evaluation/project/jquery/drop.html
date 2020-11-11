@@ -1,0 +1,59 @@
+<html>
+<title>
+Drag and Drop
+</title>
+<style>
+.f1{
+	display:flex;
+}
+#m1{
+	flex:1;
+	background-color:lightblue;
+	height:100%;
+}
+#m2{
+	flex:2;
+	background-color:pink;
+	height:100%;
+}
+#s1{
+	background-color:darkred;
+	height:100px;
+	width:100px;
+	border:100px;
+	border-radius:50%;
+}
+#s2{
+	background-color:gold;
+	height:100px;
+	width:100px;
+	border:100px;
+}
+</style>
+<script>
+function allowdrop(e)
+{
+	e.preventDefault();
+}
+function drag(e)
+{
+	e.dataTransfer.setData("div",e.target.id);
+}
+function drop(e)
+{
+	e.preventDefault();
+	var data=e.dataTransfer.getData("div");
+	e.target.appendChild(document.getElementById(data));
+}
+</script>
+<body>
+	<div class="f1">
+		<div id="m1">
+			<div id="s1" draggable="true" ondragstart="drag(event)"></div>
+			<div id="s2" draggable="true" ondragstart="drag(event)"> </div>
+		</div>
+		<div id="m2" ondrop="drop(event)" ondragover="allowdrop(event)">
+		</div>
+	</div>
+</body>
+</html>

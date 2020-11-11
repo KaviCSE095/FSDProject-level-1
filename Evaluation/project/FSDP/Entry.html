@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+Entry and out
+</title>
+</head>
+<script type="text/javascript">
+function intime()
+{
+var t1=document.getElementById("t1");
+var t2=document.getElementById("t4");
+t2.value=t1.value;
+}
+</script>
+<style>
+.but{
+background-color:pink;
+border:10px;
+padding:10px;
+cursor:pointer;
+margin:10px
+}
+</style>
+<body>
+<form input type="text">
+<label for="text"><b>Enter your Name:</b></label><br/><br/>
+<input type="text" name="name" id="name">&nbsp &nbsp <br/><br/>
+<label for="time"><b>Enter the Intime:</b></label><br/><br/>
+<input type="time" name="t1" id="t1">&nbsp &nbsp 
+<input type="time" name="t2" id="t2">&nbsp &nbsp
+<br/><br/><label for="text"><b>Enter the Outtime:</b></label><br/><br/>
+<input type="time"id="t3">&nbsp &nbsp
+<input type="time" id="t4" readonly="readonly"><br/><br/>
+<input type="button"class="but"value="Submit"onclick="intime()">
+</form>
+</body>
+</html>

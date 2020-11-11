@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>
+Resume Result
+</title>
+</head>
+<style>
+#but{
+	height:50px;
+	width:270px;
+	background-color:pink;
+}
+.flex{
+	display:flex;
+}
+#content{
+	height:100%;
+	width:21%;
+	background-image:url("image/img1.jpg");
+	overflow:hidden;
+}
+#content:hover{
+	overflow:scroll;
+}
+#details{
+	height:100%;
+	width:80%;
+	background-image:url("image/moon.jpg");
+	background-size:cover;
+	overflow:hidden;
+}
+#details:hover{
+	overflow:scroll;
+}
+</style>
+<script>
+function goto()
+{
+	window.location="form.html";
+}
+function disp1(obj){
+		var eff=obj.value;
+		var urlp= new URLSearchParams(window.location.search);
+		var n=urlp.get('nm');
+		var d=urlp.get('dob');
+		var m=urlp.get('ml');
+		var a=urlp.get('addr');
+		var q=urlp.get('qua');
+		var b=urlp.get('bs');
+		var c=urlp.get('ct');
+		var s=urlp.get('st');
+		var p=urlp.get('pin');
+		var ph=urlp.get('ph');
+		switch(eff)
+		{
+		case "Name":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>NAME</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+n+"</center></h1>");
+			$("#d1").slideDown(2000);
+			break;
+		case "Date of birth":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>DATE OF BIRTH</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+d+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "E-mail":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>E-MAIL</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+m+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "Address":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>ADDRESS</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+a+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "Qualification":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>QUALIFICATION</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+q+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "Best Skills":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>BEST SKILLS</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+b+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "City":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>CITY</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+c+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "State":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>STATE</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+s+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "Pin code":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>PIN CODE</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+p+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		case "Ph":
+			$("#d1").fadeOut("fast");
+			$("#d1").html("<h1><center>PHONE NO</center></h1>");
+			$("#d1").append("<br/><br/><br/><h1><center>"+ph+"</center></h1>");
+			$("#d1").slideDown(3000);
+			break;
+		}
+}
+</script>
+<script src="js/jquery-3.3.1.min.js"></script> 
+<body>
+<div class="flex">
+	<div id="content">
+		<h1><font color="silver">Select Anything</font></h1>
+		<button id="but" type="button" onclick="disp1(this)" value="Name"><h3>Name</h3> </button>
+		<button id="but" type="button" onclick="disp1(this)" value="Date of birth"><h3>Date of birth</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="E-mail"><h3>E-mail</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="Address"> <h3>Address</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="Qualification"><h3>Qualification</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="Best Skills"><h3>Best Skills</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="City"><h3>City</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="State"><h3>State</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="Pin code"><h3>Pin code</h3></button>
+		<button id="but" type="button" onclick="disp1(this)" value="Ph"><h3>Phone No</h3></button>
+		<button id="but" value="Exit" onclick="goto()"><h3>Exit</h3></button>
+	</div>
+	<div id="details" class="" style="word-wrap:break-word">
+	<font color="gold">
+	<br/><br/><br/><br/><br/><br/>
+		<div id="d1">
+			
+		 </div>
+	</font>
+	</div>
+</div>
+</body>
+</html>

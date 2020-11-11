@@ -1,0 +1,50 @@
+<html>
+<body style="margin:50px; height=300px; background-color:lightpink">
+<head>
+<title>Kavicse</title>
+<script>
+function valid()
+{
+var uname=document.getElementById("username").value;
+var psw=document.getElementById("psw").value;
+if(uname==psw&&uname!="")
+{
+alert("Login success.");
+window.location="index.html";
+}
+else if(uname==""||pwd=="")
+{
+alert("Invalid Username or Password");
+}
+else
+{
+alert("Login failed.")
+}
+}
+</script>
+<style>
+.button{
+background-color:lightgreen;
+border:10px;
+padding:10px;
+}
+.button:hover{
+background-color:green;
+}
+</style>
+</head>
+<font color="blue"style="font-size:40px" align="center"><h1><i>KaviBharathi k cse</i></h1></font>
+<form input type="text">
+<center>
+<u><h2>Login</h2></u><br/><br/>
+<b>Username:</b>
+<input type="text"placeholder="Enter username"name="uname"id="username"required=""><hr /><br/><br/>
+<label for="psw"><b>Password:</b></label><input type="password" id="psw"placeholder="Enter password"name="psw"required>
+<hr/><input type="button"class="button"value="Login"onclick="valid()">
+<input type="reset"value="Reset" class="button">
+<br/><br/>Note:Username and Password must be same.
+</center>
+</form>
+</table>	
+</body>
+</html>
