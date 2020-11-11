@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>
+Online Quiz
+</title>
+</head>
+<style>
+h1{
+color:teal;
+}
+h2{
+color:purple;
+}
+button
+{
+background-color:springgreen;
+height:50px;
+width:100px;
+border-radius:40%;
+}
+</style>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+function eval(){
+	var score=0;
+	var ans1=$("input[name='q1']:checked").val();
+	var ans2=$("input[name='q2']:checked").val();
+	var ans3=$("input[name='q3']:checked").val();
+	var ans4=$("input[name='q4']:checked").val();
+	var ans5=$("input[name='q5']:checked").val();
+	if(ans1=="q13")
+		score+=2;
+	if(ans2=="q22")
+		score+=2;
+	if(ans3=="q31")
+		score+=2;
+	if(ans4=="q44")
+		score+=2;
+	if(ans5=="q52")
+		score+=2;
+	$("#h1").html("Your score is "+score+" 	out of 10");
+	topFunction();
+}
+</script>
+<body style="margin:30px">
+	<center><h1 id="h1">Select your Answer</h1></center>
+	<h2>What is Our National Animal?</h2>
+		<input type="radio" name="q1" value="q11">Wolf<br/>
+		<input type="radio"  name="q1" value="q12">Lion<br/>
+		<input type="radio"  name="q1" value="q13">Tiger<br/>
+		<input type="radio"  name="q1" value="q14">Cow<br/>
+	<h2>What is Our National Game?</h2>
+		<input type="radio" name="q2" value="q21">Cricket<br/>
+		<input type="radio" name="q2" value="q22">Hockey<br/>
+		<input type="radio" name="q2" value="q23">Volley ball<br/>
+		<input type="radio" name="q2" value="q24">Foot ball<br/>
+	<h2>What is Our National Flower?</h2>
+		<input type="radio" name="q3" value="q31">Lotus<br/>
+		<input type="radio" name="q3" value="q32">Jasmine<br/>
+		<input type="radio" name="q3" value="q33">Sun flower<br/>
+		<input type="radio" name="q3" value="q34">Rose<br/>
+	<h2>What is Our National Tree?</h2>
+		<input type="radio" name="q4" value="q41">Oak<br/>
+		<input type="radio" name="q4" value="q42">Willow<br/>
+		<input type="radio" name="q4" value="q43">Neem Tree<br/>
+		<input type="radio" name="q4" value="q44">Banyan Tree<br/>
+	<h2>What is Our National Bird?</h2>
+		<input type="radio" name="q5" value="q51">Parrot<br/>
+		<input type="radio" name="q5" value="q52">Peacock<br/>
+		<input type="radio" name="q5" value="q53">Cock<br/>
+		<input type="radio" name="q5" value="q54">Sparrow<br/>
+	<center><button type="Submit" onclick="eval()">Submit</button></center>
+</body>
+</html>

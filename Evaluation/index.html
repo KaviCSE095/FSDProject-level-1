@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<title>
+			FSDP Evaluation
+		</title>
+	</head>
+	<style>
+		#head{
+			background-color:yellow;
+			height:10%;
+		}
+		.flexbox{
+			display:flex;
+			height:80%;
+		}
+		#menu{
+			width:25%;
+			background-image:url("images/nat.jpg");
+			background-size:cover;
+		}
+		#content{
+			width:75%;
+			background-image:url("images/img4.jpg");
+			background-size:cover;
+			overflow:hidden;
+		}
+		#foot{
+			height:10%;
+			background-color:red;
+		}
+		button{
+			height:50px;
+			width:270px;
+			background-color:pink;
+			border-radius:40%;
+			margin-left:20px;
+			outline:none;
+		}
+		button.back{
+			height:40px;
+			width:50px;
+			background-color:white;
+			border-radius:15%;
+			margin-left:20px;
+			position:fixed;
+			left:270;
+		}
+		img{
+			margin-top:10px;
+			height:45px;
+			width:45px;
+			border-radius:50%;
+		}
+		iframe{
+			height:100%;
+			width:100%;
+		}	
+	</style>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		function show(obj)
+		{
+			var a=obj.value;
+			switch(a)
+			{
+			case "abt":
+				$("#button1").css("background-color","grey");
+				$("#button2").css("background-color","pink");
+				$("#button3").css("background-color","pink");
+				$("#button4").css("background-color","pink");
+				$("#button5").css("background-color","pink");
+				$("#button6").css("background-color","pink");
+				$("#content").html("<iframe src='abtme.html'></iframe>")
+				$("h1").css("color","teal");
+				$("h2").css("color","purple");
+				break;
+			case "qz":
+				$("#button1").css("background-color","pink");
+				$("#button2").css("background-color","grey");
+				$("#button3").css("background-color","pink");
+				$("#button4").css("background-color","pink");
+				$("#button5").css("background-color","pink");
+				$("#button6").css("background-color","pink");
+				$("#content").html("<iframe></iframe>");
+				$("iframe").attr("src","quiz.html");
+				break;
+			case "ml":
+				$("#button1").css("background-color","pink");
+				$("#button2").css("background-color","pink");
+				$("#button3").css("background-color","grey");
+				$("#button4").css("background-color","pink");
+				$("#button5").css("background-color","pink");
+				$("#button6").css("background-color","pink");
+				$("#content").html("<iframe src='modlib.html'></iframe>");
+				break;
+			case "cs":
+				$("#button1").css("background-color","pink");
+				$("#button2").css("background-color","pink");
+				$("#button3").css("background-color","pink");
+				$("#button4").css("background-color","grey");
+				$("#button5").css("background-color","pink");
+				$("#button6").css("background-color","pink");
+				$("#content").html("<iframe src='jquery-Cheat-Sheet.pdf'></iframe>")
+				break;
+			case "os":
+				$("#button1").css("background-color","pink");
+				$("#button2").css("background-color","pink");
+				$("#button3").css("background-color","pink");
+				$("#button4").css("background-color","pink");
+				$("#button5").css("background-color","grey");
+				$("#button6").css("background-color","pink");
+				$("#content").html("<center><h1>My Own Space</h1></center>");
+				$("#content").append("<iframe src='https://kavicse.wordpress.com/author/kavicse'></iframe>");
+				break;
+			case "af":
+				$("#button1").css("background-color","pink");
+				$("#button2").css("background-color","pink");
+				$("#button3").css("background-color","pink");
+				$("#button4").css("background-color","pink");
+				$("#button5").css("background-color","pink");
+				$("#button6").css("background-color","grey");
+				$("#content").html("<iframe src='feedback.html'></iframe>");
+				break;
+			}
+		}
+	function back()
+	{
+		window.history.back();
+	}
+	</script>
+	<body>
+		<div id="head">
+			<font color="maroon" size="15">
+			<center><img src="images/img2.jpg">	Kavibharathi's Blog</center>
+			</font> 
+		</div>
+		<div class="flexbox">
+			<div id="menu">
+				<br/>
+				<button class="back" onclick="back()" title="Go Back"><font size="5">←</font></button> 
+				<br/><br/><br/>
+				<button id="button1" onclick="show(this)" value="abt"><h3>About me</h3></button>
+				<br/><br/>
+				<button id="button2" onclick="show(this)" value="qz"><h3>Quiz</h3></button>
+				<br/><br/>
+				<button id="button3" onclick="show(this)" value="ml"><h3>Module Library</h3></button>
+				<br/><br/>
+				<button id="button4" onclick="show(this)" value="cs"><h3>cheat sheets</h3></button>
+				<br/><br/>
+				<button id="button5" onclick="show(this)" value="os"><h3>My Own Space</h3></button>
+				<br/><br/>
+				<button id="button6" onclick="show(this)" value="af"><h3>About FSDP</h3></button>
+			</div>
+			<div id="content">
+			
+			</div>
+		</div>
+		<div id="foot">
+			<center>
+			<br/>
+			<font color="silver" size="6">
+			@ 2019 Kavibharathi CSE Technovation. All rights reserved.
+			</font>
+			</center>
+		</div>
+	</body>
+</html>
